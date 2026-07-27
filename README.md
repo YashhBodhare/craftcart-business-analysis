@@ -100,6 +100,6 @@ ECBA Certified Business Analyst
 
 MBA Candidate
 
-LinkedIn: *(Add later)*
+LinkedIn: *((https://www.linkedin.com/in/yashh-bodhare-0650a32b6/))*
 
 GitHub: *(Current Repository)*
