@@ -103,3 +103,7 @@ MBA Candidate
 LinkedIn: *((https://www.linkedin.com/in/yashh-bodhare-0650a32b6/))*
 
 GitHub: *(Current Repository)*
+
+📺 **YouTube Playlist Link**
+[
+https://www.youtube.com/@BAYB](https://youtube.com/playlist?list=PLCN7AxeX7qKoIwSigzonVbYSIwEx4nCJF&si=IlO0tDnoxIcp4kqs)
