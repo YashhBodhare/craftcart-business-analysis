@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="UPI Payment Flow" id="upiFlow1">
+    <mxGraphModel dx="1182" dy="733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Start -->
+        <mxCell id="start" value="Start Checkout" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Review Order -->
+        <mxCell id="review" value="Review Order Summary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="220" y="80" width="160" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Select Payment Method -->
+        <mxCell id="selectPayment" value="Select Payment Method = UPI" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="440" y="80" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Enter UPI ID -->
+        <mxCell id="enterUpi" value="Enter UPI ID (e.g., name@upi)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="720" y="80" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Validate Format -->
+        <mxCell id="validateFormat" value="Valid UPI ID format?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="980" y="80" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Invalid Format -->
+        <mxCell id="invalidFormat" value="Show Error: Invalid UPI ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="20" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Send Payment Request -->
+        <mxCell id="sendRequest" value="Send Payment Request to UPI App" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="140" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Approve/Decline -->
+        <mxCell id="approveDecline" value="UPI App: Approve or Decline?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="140" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Decline -->
+        <mxCell id="decline" value="Show Failure & Allow Retry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="80" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Authorize Gateway -->
+        <mxCell id="authorize" value="Authorize Payment with Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="200" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Gateway Success -->
+        <mxCell id="gatewaySuccess" value="Gateway Success?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="200" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Failure -->
+        <mxCell id="failure" value="Show Failure (Decline/Timeout)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="2280" y="140" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Success -->
+        <mxCell id="success" value="Create Order & Show Confirmation" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="2280" y="260" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="edge1" edge="1" parent="1" source="start" target="review"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="review" target="selectPayment"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="selectPayment" target="enterUpi"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="enterUpi" target="validateFormat"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="validateFormat" target="invalidFormat"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="validateFormat" target="sendRequest"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="sendRequest" target="approveDecline"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="approveDecline" target="decline"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="approveDecline" target="authorize"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="authorize" target="gatewaySuccess"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge11" edge="1" parent="1" source="gatewaySuccess" target="failure"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge12" edge="1" parent="1" source="gatewaySuccess" target="success"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
